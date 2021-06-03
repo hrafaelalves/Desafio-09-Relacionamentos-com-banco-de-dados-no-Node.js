@@ -16,7 +16,17 @@ class CreateProductService {
   constructor(private productsRepository: IProductsRepository) {}
 
   public async execute({ name, price, quantity }: IRequest): Promise<Product> {
-    // TODO
+    const checkProductExist = await this.productsRepository.findByName(name);
+
+    if(checkProductExist){
+      throw new AppError('Product name already used.');
+    }
+
+    const product = await this.productsRepository.create({
+      name, price, quantity
+    });
+
+    return product;
   }
 }
 
