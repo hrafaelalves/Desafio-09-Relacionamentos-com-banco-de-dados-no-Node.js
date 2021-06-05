@@ -15,14 +15,14 @@ export default class CreateOrdersProducts1622756362213 implements MigrationInter
                         default: 'uuid_generate_v4()'
                     },
                     {
-                        name: 'name',
-                        type: 'varchar'
-                    },
-                    {
                         name: 'price',
                         type: 'decimal',
                         precision: 10,
                         scale: 2
+                    },
+                    {
+                        name: 'quantity',
+                        type: 'int'
                     },
                     {
                         name: 'created_at',

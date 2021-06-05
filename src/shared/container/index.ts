@@ -13,3 +13,5 @@ container.registerSingleton<ICustomersRepository>('CustomersRepository', Custome
 
 container.registerSingleton<IProductsRepository>('ProductsRepository', ProductsRepository);
 
+container.registerSingleton<IOrdersRepository>('OrdersRepository', OrdersRepository);
+

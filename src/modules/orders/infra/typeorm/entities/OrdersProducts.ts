@@ -31,7 +31,7 @@ class OrdersProducts {
   @Column()
   order_id: string;
 
-  @Column('number')
+  @Column('decimal')
   price: number;
 
   @Column('int')
